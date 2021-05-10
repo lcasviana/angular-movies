@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title> {{ movie.title }} </mat-card-title>
+    <mat-card-subtitle> {{ movie.year }} </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content> {{ movie.description }} </mat-card-content>
+  <mat-card-actions>
+    <a mat-raised-button [href]="movie.imdbUrl">IMDB</a>
+  </mat-card-actions>
+</mat-card>
