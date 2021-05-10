@@ -8,21 +8,23 @@ const routes = [
   {
     path: "movies",
     pathMatch: "full",
-    loadChildren: () =>
-      import("./movies/movies.module").then((m) => m.MoviesModule)
+    loadChildren: () => import("./movies/movies.module").then((m) => m.MoviesModule),
   },
-  { path: "**", redirectTo: "movies" }
+  {
+    path: "**",
+    redirectTo: "movies",
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes), BrowserAnimationsModule],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-class AppRoutingModule {}
+class AppRoutingModule { }
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

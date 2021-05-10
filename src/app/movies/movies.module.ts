@@ -11,17 +11,20 @@ const routes = [
     pathMatch: "full",
     component: MoviesComponent
   },
-  { path: "**", redirectTo: "" }
+  {
+    path: "**",
+    redirectTo: "",
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-class MoviesRoutingModule {}
+class MoviesRoutingModule { }
 
 @NgModule({
   declarations: [MoviesComponent, MovieComponent],
-  imports: [CommonModule, MoviesRoutingModule, MaterialModule]
+  imports: [CommonModule, MoviesRoutingModule, MaterialModule],
 })
-export class MoviesModule {}
+export class MoviesModule { }

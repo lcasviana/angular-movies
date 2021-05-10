@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 
 @Component({
-  templateUrl: "./movies.component.html"
+  templateUrl: "./movies.component.html",
 })
-export class MoviesComponent {}
+export class MoviesComponent { }
