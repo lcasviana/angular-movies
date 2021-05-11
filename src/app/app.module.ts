@@ -3,6 +3,8 @@ import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { RouterModule } from "@angular/router";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MaterialModule } from "./shared/material.module";
+import { SharedModule } from "./shared/shared.module";
 
 const routes = [
   {
@@ -24,7 +26,13 @@ class AppRoutingModule { }
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    MaterialModule,
+    SharedModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

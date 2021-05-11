@@ -1,0 +1,18 @@
+<main class="shell-container">
+  <mat-toolbar color="primary" class="shell-topbar">
+    <button mat-icon-button (click)="matSidenav.toggle()">
+      <mat-icon> menu </mat-icon>
+    </button>
+    <h1> Movies </h1>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="shell-content">
+    <mat-sidenav #matSidenav>
+      Teste
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <ng-content></ng-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</main>

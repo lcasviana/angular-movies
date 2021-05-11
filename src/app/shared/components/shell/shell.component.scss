@@ -1,0 +1,23 @@
+$topbar: 56px;
+
+.shell-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.shell-topbar {
+  height: $topbar;
+  position: fixed;
+  z-index: 9;
+}
+
+.shell-content {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: $topbar;
+}
