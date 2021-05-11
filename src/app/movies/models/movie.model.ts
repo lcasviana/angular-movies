@@ -1,7 +1,8 @@
 export type Movie = {
   title: string;
   description: string;
-  genre: string;
+  genres: string[];
   year: number;
   imdbUrl: string;
+  imdbCover: string;
 };

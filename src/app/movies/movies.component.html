@@ -1,7 +1,3 @@
-<movie [movie]="{
-  title: 'titulo',
-  description: 'descricao',
-  genre: 'genero',
-  year: 2020,
-  imdbUrl: 'url'
-}"></movie>
+<main class="movies-container pa3">
+  <movie *ngFor="let movie of movies" [movie]="movie"></movie>
+</main>
