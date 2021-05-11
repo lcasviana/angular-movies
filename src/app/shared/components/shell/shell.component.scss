@@ -1,4 +1,5 @@
 $topbar: 56px;
+$sidebar: 300px;
 
 .shell-container {
   position: absolute;
@@ -20,4 +21,8 @@ $topbar: 56px;
   left: 0;
   right: 0;
   top: $topbar;
+}
+
+.shell-sidenav {
+  width: $sidebar;
 }
