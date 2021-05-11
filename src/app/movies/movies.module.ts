@@ -3,7 +3,7 @@ import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { MoviesComponent } from "./movies.component";
 import { MovieComponent } from "./components/movie/movie.component";
-import { MaterialModule } from "../shared/material.module";
+import { SharedModule } from "../shared/shared.module";
 
 const routes = [
   {
@@ -25,6 +25,6 @@ class MoviesRoutingModule { }
 
 @NgModule({
   declarations: [MoviesComponent, MovieComponent],
-  imports: [CommonModule, MoviesRoutingModule, MaterialModule],
+  imports: [CommonModule, MoviesRoutingModule, SharedModule],
 })
 export class MoviesModule { }
