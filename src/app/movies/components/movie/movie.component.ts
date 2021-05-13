@@ -1,10 +1,10 @@
 import { Component, Input } from "@angular/core";
-import { Movie } from "../../models/movie.model";
+import { TheMoviesDbResultModel } from "../../models/the-movies-db.model";
 
 @Component({
   selector: "movie",
   templateUrl: "./movie.component.html",
 })
 export class MovieComponent {
-  @Input() movie!: Movie;
+  @Input() movie!: TheMoviesDbResultModel;
 }

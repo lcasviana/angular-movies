@@ -1,12 +1,12 @@
 <main class="flex flex-column items-center pa3">
-  <mat-form-field appearance="outline" color="accent" class="movies-search">
+  <!-- <mat-form-field appearance="outline" color="accent" class="movies-search">
     <mat-label> Search movies </mat-label>
     <input matInput type="text" [formControl]="search">
     <button mat-button *ngIf="search.value" matSuffix mat-icon-button (click)="search.setValue('')">
-      <mat-icon>close</mat-icon>
+      <mat-icon> close </mat-icon>
     </button>
-  </mat-form-field>
+  </mat-form-field> -->
   <section class="movies-container">
-    <movie *ngFor="let movie of movies" [movie]="movie"></movie>
+    <movie *ngFor="let movie of movies?.results" [movie]="movie"></movie>
   </section>
 </main>
