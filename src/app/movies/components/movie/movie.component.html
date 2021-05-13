@@ -1,6 +1,6 @@
-<mat-card>
+<mat-card class="flex-column h-100 border-box">
   <mat-card-header>
-    <!-- <img mat-card-avatar [src]="movie.imdbCover" [alt]="movie.title"> -->
+    <img mat-card-avatar [src]="'http://image.tmdb.org/t/p/w500' + movie.poster_path" [alt]="movie.title">
     <mat-card-title> {{ movie.title }} </mat-card-title>
     <mat-card-subtitle> {{ movie.release_date }} </mat-card-subtitle>
   </mat-card-header>
@@ -9,6 +9,8 @@
   </mat-chip-list> -->
   <mat-card-content class="mv3"> {{ movie.overview }} </mat-card-content>
   <!-- <mat-card-actions>
-    <a mat-raised-button [href]="movie.imdbUrl" target="_blank" color="accent"> IMDb </a>
+    <a mat-raised-button [href]="'https://www.imdb.com/title/' + movie.id" target="_blank" color="accent">
+      IMDb
+    </a>
   </mat-card-actions> -->
 </mat-card>
