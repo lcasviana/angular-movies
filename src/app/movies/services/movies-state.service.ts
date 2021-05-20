@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { filter } from 'rxjs/operators';
 import { MovieModel } from '../models/movie.model';
 import { TheMoviesDbResultModel } from '../models/the-movies-db.model';
 import { MoviesRepository } from './movies-repository.service';

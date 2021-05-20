@@ -5,10 +5,10 @@ import { takeUntil } from "rxjs/operators";
 import { MoviesState } from "../../services/movies-state.service";
 
 @Component({
-  templateUrl: './movies-page.component.html',
-  styleUrls: ['./movies-page.component.scss'],
+  templateUrl: './movies-popular.component.html',
+  styleUrls: ['./movies-popular.component.scss'],
 })
-export class MoviesPageComponent implements OnInit, OnDestroy {
+export class MoviesPopularComponent implements OnInit, OnDestroy {
   private readonly destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
 
   search: FormControl = new FormControl('');

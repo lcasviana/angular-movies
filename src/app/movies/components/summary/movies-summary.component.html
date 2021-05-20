@@ -4,13 +4,5 @@
     <mat-card-title> {{ movie.title }} </mat-card-title>
     <mat-card-subtitle> {{ movie.releaseDate }} </mat-card-subtitle>
   </mat-card-header>
-  <!-- <mat-chip-list>
-    <mat-chip *ngFor="let genre of movie.genres" color="accent" selected> {{ genre }} </mat-chip>
-  </mat-chip-list> -->
   <mat-card-content class="mv3"> {{ movie.description }} </mat-card-content>
-  <!-- <mat-card-actions>
-    <a mat-raised-button [href]="'https://www.imdb.com/title/' + movie.id" target="_blank" color="accent">
-      IMDb
-    </a>
-  </mat-card-actions> -->
 </mat-card>

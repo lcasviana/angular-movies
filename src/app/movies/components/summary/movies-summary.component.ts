@@ -6,6 +6,6 @@ import { MovieModel } from '../../models/movie.model';
   templateUrl: './movies-summary.component.html',
   styleUrls: ['./movies-summary.component.scss'],
 })
-export class MovieComponent {
+export class MoviesSummaryComponent {
   @Input() movie!: MovieModel;
 }
