@@ -1,21 +1,17 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { RouterModule } from "@angular/router";
-import { MoviesComponent } from "./components/movies.component";
-import { MovieComponent } from "./components/movie/movie.component";
-import { SharedModule } from "../shared/shared.module";
-import { MoviesService } from "./services/movies.service";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { MoviesComponent } from './components/movies.component';
+import { MovieComponent } from './components/summary/movies-summary.component';
+import { SharedModule } from '../shared/shared.module';
+import { MoviesRepository } from './services/movies-repository.service';
+import { MoviesState } from './services/movies-state.service';
+import { MoviesPageComponent } from './components/page/movies-page.component';
 
 const routes = [
-  {
-    path: "",
-    pathMatch: "full",
-    component: MoviesComponent
-  },
-  {
-    path: "**",
-    redirectTo: "",
-  },
+  { path: '', pathMatch: 'full', component: MoviesPageComponent },
+  { path: ':id', pathMatch: 'full', component: MoviesComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
@@ -25,8 +21,9 @@ const routes = [
 class MoviesRoutingModule { }
 
 @NgModule({
-  declarations: [MoviesComponent, MovieComponent],
+  bootstrap: [MoviesComponent],
+  declarations: [MoviesComponent, MoviesPageComponent, MovieComponent],
   imports: [CommonModule, MoviesRoutingModule, SharedModule],
-  providers: [MoviesService],
+  providers: [MoviesRepository, MoviesState],
 })
 export class MoviesModule { }

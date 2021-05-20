@@ -1,18 +1,3 @@
-<main class="flex flex-column items-center pa3">
-  <mat-form-field appearance="outline" color="accent" class="movies-search">
-    <mat-label> Search movies </mat-label>
-    <input matInput type="text" [formControl]="search">
-    <button mat-button *ngIf="search.value" matSuffix mat-icon-button (click)="search.setValue('')">
-      <mat-icon> close </mat-icon>
-    </button>
-  </mat-form-field>
-  <section class="movies-container">
-    <ng-container *ngIf="movies?.length">
-      <ng-container *ngFor="let movie of movies">
-        <ng-container *ngIf="movie?.title">
-          <movie [movie]="movie"></movie>
-        </ng-container>
-      </ng-container>
-    </ng-container>
-  </section>
-</main>
+<shell title="Movies">
+  <router-outlet></router-outlet>
+</shell>
