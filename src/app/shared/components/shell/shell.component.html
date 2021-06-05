@@ -18,7 +18,11 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <ng-content></ng-content>
+      <main class="flex justify-center">
+        <section class="w-100" style="max-width: 1920px;">
+          <ng-content></ng-content>
+        </section>
+      </main>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </main>

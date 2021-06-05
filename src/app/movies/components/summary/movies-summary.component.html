@@ -4,5 +4,10 @@
     <mat-card-title> {{ movie.title }} </mat-card-title>
     <mat-card-subtitle> {{ movie.releaseDate }} </mat-card-subtitle>
   </mat-card-header>
-  <mat-card-content class="mv3"> {{ movie.description }} </mat-card-content>
+  <mat-card-content class="mv3">
+    <p class="flex items-center">
+      <mat-icon class="mr2">star</mat-icon> {{ movie.votes }}
+    </p>
+    <p>{{ movie.description }}</p>
+  </mat-card-content>
 </mat-card>

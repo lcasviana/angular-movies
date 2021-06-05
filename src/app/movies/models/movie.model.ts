@@ -3,4 +3,5 @@ export interface MovieModel {
   imageUrl: string;
   releaseDate: string;
   title: string;
+  votes: number;
 }

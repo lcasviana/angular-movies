@@ -1,10 +1,22 @@
-.movies-search {
-  min-width: 420px;
-  max-width: 100%;
+.movies-search, .movies-order {
+  width: 100%;
 }
 
 .movies-container {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .movies-search, .movies-order {
+    width: 420px;
+  }
+
+  .movies-container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    justify-content: center;
+  }
 }

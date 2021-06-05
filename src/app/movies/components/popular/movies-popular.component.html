@@ -1,13 +1,23 @@
 <main class="flex flex-column items-center pa3">
-  <mat-form-field appearance="outline" color="accent" class="movies-search">
-    <mat-label> Search movies </mat-label>
-    <input matInput type="text" [formControl]="search">
-    <button mat-button *ngIf="search.value" matSuffix mat-icon-button (click)="search.setValue('')">
-      <mat-icon> close </mat-icon>
-    </button>
-  </mat-form-field>
+  <section class="flex flex-row flex-wrap justify-center" style="column-gap: 1rem;">
+    <mat-form-field appearance="outline" color="accent" class="movies-search">
+      <mat-label> Search movies </mat-label>
+      <input matInput type="text" [formControl]="search">
+      <button mat-button *ngIf="search.value" matSuffix mat-icon-button (click)="search.setValue('')">
+        <mat-icon> close </mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field appearance="outline" color="accent" class="movies-order">
+      <mat-label> Sort by </mat-label>
+      <mat-select (selectionChange)="setSortBy($event.value)">
+        <mat-option [value]="null" class="i"> Default </mat-option>
+        <mat-option [value]="'title'"> Title </mat-option>
+        <mat-option [value]="'votes'"> Votes </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </section>
   <section class="movies-container">
-    <ng-container *ngFor="let movie of state.movies$ | async">
+    <ng-container *ngFor="let movie of movies">
       <movies-summary [movie]="movie"></movies-summary>
     </ng-container>
   </section>

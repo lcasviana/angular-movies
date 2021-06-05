@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { MovieModel } from '../models/movie.model';
 import { TheMoviesDbResultModel } from '../models/the-movies-db.model';
 import { MoviesRepository } from './movies-repository.service';
@@ -7,7 +7,8 @@ import { MoviesRepository } from './movies-repository.service';
 @Injectable()
 export class MoviesState {
   private readonly _movies: BehaviorSubject<MovieModel[]> = new BehaviorSubject<MovieModel[]>([]);
-  public readonly movies$ = this._movies.asObservable();
+
+  public readonly movies$: Observable<MovieModel[]> = this._movies.asObservable();
 
   private get movies(): MovieModel[] {
     return this._movies.getValue();
@@ -28,6 +29,7 @@ export class MoviesState {
       imageUrl: `http://image.tmdb.org/t/p/w500${theMoviesDbModel.poster_path}`,
       releaseDate: theMoviesDbModel.release_date,
       title: theMoviesDbModel.title,
+      votes: theMoviesDbModel.vote_average,
     };
   }
 }
