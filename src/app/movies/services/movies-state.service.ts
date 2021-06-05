@@ -25,6 +25,7 @@ export class MoviesState {
 
   private toMovieModel(theMoviesDbModel: TheMoviesDbResultModel): MovieModel {
     return {
+      id: theMoviesDbModel.id,
       description: theMoviesDbModel.overview,
       imageUrl: `http://image.tmdb.org/t/p/w500${theMoviesDbModel.poster_path}`,
       releaseDate: theMoviesDbModel.release_date,
