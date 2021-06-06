@@ -12,10 +12,9 @@ import { MoviesDetailComponent } from './components/detail/movies-detail.compone
 const routes = [
   {
     path: '',
-    pathMatch: 'full',
     component: MoviesComponent,
     children: [
-      { path: '', pathMatch: 'full', component: MoviesPopularComponent },
+      { path: '', component: MoviesPopularComponent },
       { path: ':id', component: MoviesDetailComponent },
     ],
   },

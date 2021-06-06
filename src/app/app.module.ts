@@ -9,7 +9,6 @@ import { SharedModule } from './shared/shared.module';
 const routes = [
   {
     path: 'movies',
-    pathMatch: 'full',
     loadChildren: () => import('./movies/movies.module').then((m) => m.MoviesModule),
   },
   { path: '**', redirectTo: 'movies' },
