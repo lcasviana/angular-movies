@@ -1,1 +1,25 @@
-movies-detail
+<main class="flex flex-column items-center pa3">
+  <a mat-stroked-button routerLink="/movies"> Return </a>
+
+  <ng-container *ngIf="movie">
+    <section class="mt3">
+      <mat-card class="flex-column h-100 border-box" style="padding: 0;">
+        <main class="card-container">
+          <img [src]="movie.imageUrl" [alt]="movie.title">
+          <section class="pa3">
+            <article>
+              <mat-card-title> {{ movie.title }} </mat-card-title>
+              <mat-card-subtitle> {{ movie.releaseDate }} </mat-card-subtitle>
+            </article>
+            <article class="mv3">
+              <p class="flex items-center">
+                <mat-icon class="mr2">star</mat-icon> {{ movie.votes }}
+              </p>
+              <p>{{ movie.description }}</p>
+            </article>
+          </section>
+        </main>
+      </mat-card>
+    </section>
+  </ng-container>
+</main>

@@ -1,0 +1,10 @@
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .card-container {
+    grid-template-columns: 200px 1fr;
+  } 
+}

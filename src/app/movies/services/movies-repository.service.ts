@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { TheMoviesDbDetailModel } from '../models/the-movies-db-detail.model';
 import { TheMoviesDbModel } from '../models/the-movies-db.model';
 
 @Injectable()
@@ -15,8 +16,8 @@ export class MoviesRepository {
     return url;
   }
 
-  public getById(id: string): Observable<any> {
-    return this.httpClient.get(this.baseUrl(`movie/${id}`));
+  public getById(id: number): Observable<TheMoviesDbDetailModel> {
+    return this.httpClient.get<TheMoviesDbDetailModel>(this.baseUrl(`movie/${id}`));
   }
 
   public getPopulars(page: number = 1): Observable<TheMoviesDbModel> {

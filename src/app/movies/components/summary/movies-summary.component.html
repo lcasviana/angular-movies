@@ -11,6 +11,6 @@
     <p>{{ movie.description }}</p>
   </mat-card-content>
   <mat-card-actions>
-    <a mat-stroked-button [routerLink]="'/movies/' + movie.id"> Details </a>
+    <a mat-stroked-button routerLink="/movies/{{ movie.id }}"> Details </a>
   </mat-card-actions>
 </mat-card>

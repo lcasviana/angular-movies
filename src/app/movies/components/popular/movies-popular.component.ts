@@ -1,9 +1,9 @@
-import { Component, OnDestroy, OnInit } from "@angular/core";
-import { FormControl } from "@angular/forms";
-import { ReplaySubject } from "rxjs";
-import { takeUntil } from "rxjs/operators";
-import { MovieModel } from "../../models/movie.model";
-import { MoviesState } from "../../services/movies-state.service";
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { ReplaySubject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+import { MovieModel } from '../../models/movie.model';
+import { MoviesState } from '../../services/movies-state.service';
 
 @Component({
   templateUrl: './movies-popular.component.html',
